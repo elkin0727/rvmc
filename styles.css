@@ -1,0 +1,212 @@
+/* Grid específico SOLO para la fila de Estudio Bíblico de la Congregación */
+.grid-estudio-biblico {
+    grid-template-columns: 45px 2fr 2.5fr;
+    gap: 0 10px;
+    padding: 0 10px 0 10px;
+    margin-bottom: 0;
+}
+/* --- CONFIGURACIÓN GENERAL SÚPER COMPACTA --- */
+body {
+    font-family: 'Lato', 'Segoe UI', Tahoma, sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 5px;
+    font-size: 10.5pt;
+}
+
+.programa-container {
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    border: 1px solid #aaa;
+}
+
+/* --- CABECERA SÚPER COMPACTA --- */
+.programa-header {
+    padding: 6px 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.programa-header h1 {
+    font-size: 12pt;
+    margin: 0;
+    font-weight: 700;
+    flex: 0.6;
+    padding-right: 20px;
+}
+
+.oficiales {
+    display: flex;
+    flex-direction: column;
+    font-size: 9pt;
+    gap: 4px;
+    flex: 0.4;
+}
+
+.oficiales .fila-superior {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.oficiales p {
+    margin: 0;
+    white-space: nowrap;
+    text-align: right;
+}
+
+/* --- CUERPO DEL PROGRAMA (GRID) SÚPER COMPACTO --- */
+.programa-grid {
+    display: grid;
+    gap: 0 10px; 
+    padding: 4px 10px;
+}
+
+/* Grid inicial */
+.grid-inicial {
+    grid-template-columns: 45px 1fr 1fr;
+}
+
+/* Grid maestros - más espacio para los nombres */
+.grid-maestros {
+    grid-template-columns: 45px 1fr 2fr;
+}
+
+/* Grid vida cristiana - más espacio para los títulos */
+.grid-vida-cristiana {
+    grid-template-columns: 45px 2.5fr 0.8fr;
+}
+
+.fila-programa, .fila-header-salas {
+    display: contents; 
+}
+
+.hora, .descripcion, .participantes-columna {
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px dotted #e0e0e0;
+}
+.fila-programa:last-child .hora,
+.fila-programa:last-child .descripcion,
+.fila-programa:last-child .participantes-columna {
+    border-bottom: none;
+}
+
+.hora {
+    font-weight: 700;
+    font-size: 9.5pt;
+    color: #333;
+}
+.descripcion {
+    margin: 0;
+}
+
+.participantes-columna {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+/* --- NUEVO: Estilos para el encabezado de las salas --- */
+.fila-header-salas .participantes-columna {
+    align-items: flex-end; /* Alinea los encabezados en la parte inferior */
+    border-bottom: 1px solid #333; /* Línea sólida para indicar que es un encabezado */
+    padding-bottom: 2px;
+}
+.sala-header {
+    flex: 1;
+    font-size: 8pt;
+    font-weight: 700;
+    color: #333;
+    padding: 0 0 0 8px;
+}
+.sala-header:first-child {
+    padding-left: 0;
+}
+
+
+/* --- División de Salas y Participantes --- */
+.division-salas {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+.sala {
+    flex: 1;
+    padding: 0 0 0 8px;
+    border-left: 1px solid #ddd;
+}
+.sala:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+.participante {
+    font-size: 10pt;
+}
+
+/* --- CORRECCIÓN: Tamaño de letra de Oración Final --- */
+.fila-programa.final-combinada .participante-unico {
+    font-size: 9pt;
+}
+
+.fila-programa.final-combinada .descripcion {
+    border-right: none;
+}
+
+/* --- NUEVO: Estilos para la oración final --- */
+.participante-unico.final {
+    font-size: 0.95em;
+}
+
+/* --- TÍTULOS DE SECCIÓN SÚPER COMPACTOS Y CON COLOR --- */
+.titulo-seccion {
+    grid-column: 1 / -1;
+    padding: 4px 10px;
+    margin: 4px 0;
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+.titulo-seccion h2 {
+    margin: 0;
+    font-size: 10pt;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* --- COLORES ORIGINALES RESTAURADOS --- */
+.seccion-tesoros { background-color: #f0f0f0; color: #000; }
+.seccion-maestros { background-color: #d4a242; color: #ffffff; }
+.seccion-vida-cristiana { background-color: #a42a28; color: #ffffff; }
+
+/* Para asegurar que los colores se impriman desde el navegador */
+@media print {
+    .programa-container {
+        border: 1px solid #aaa;
+    }
+    .titulo-seccion {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* --- NUEVO: Estilos para el botón de generar enlace --- */
+.boton-enlace {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.boton-enlace:hover {
+    background-color: #45a049;
+}
