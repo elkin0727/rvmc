@@ -17,13 +17,13 @@ body {
 
 .programa-container {
     max-width: 800px;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 8px auto;  /* Reducido de 10px a 8px */
     border: 1px solid #aaa;
 }
 
 /* --- CABECERA SÚPER COMPACTA --- */
 .programa-header {
-    padding: 6px 10px;
+    padding: 4px 10px;  /* Reducido de 6px a 4px */
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
@@ -62,7 +62,7 @@ body {
 .programa-grid {
     display: grid;
     gap: 0 10px; 
-    padding: 4px 10px;
+    padding: 2px 10px;  /* Reducido de 4px a 2px */
 }
 
 /* Grid inicial */
@@ -85,10 +85,11 @@ body {
 }
 
 .hora, .descripcion, .participantes-columna {
-    padding: 3px 0;
+    padding: 0px 0;  /* Reducido de 3px a 2px */
     display: flex;
     align-items: center;
     border-bottom: 1px dotted #e0e0e0;
+    min-height: 20px;  /* Añadido para mantener una altura mínima */
 }
 .fila-programa:last-child .hora,
 .fila-programa:last-child .descripcion,
@@ -132,7 +133,7 @@ body {
 .division-salas {
     display: flex;
     width: 100%;
-    gap: 10px;
+    gap: 2px;  /* Reducido el espacio entre salas */
 }
 .sala {
     flex: 1;
@@ -164,15 +165,15 @@ body {
 /* --- TÍTULOS DE SECCIÓN SÚPER COMPACTOS Y CON COLOR --- */
 .titulo-seccion {
     grid-column: 1 / -1;
-    padding: 4px 10px;
-    margin: 4px 0;
+    padding: 2px 0;  /* Reducido el padding */
+    margin: 2px 0;   /* Reducido el margen */
     font-weight: 700;
     border-radius: 3px;
 }
 
 .titulo-seccion h2 {
-    margin: 0;
-    font-size: 10pt;
+    margin: 4px 0;  /* Reducido de 6px a 4px */
+    font-size: 10.5pt;  /* Ligeramente más pequeño */
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
