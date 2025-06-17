@@ -122,6 +122,9 @@
                     "duracion": "30 mins.",
                     "asignado": ["Conductor: Joaquin Cruz", "Lector: José Antonio Romero"]
                 },
+                "palabrasConclusion": {
+                    "hora": "8:06",
+                },
                 "oracionFinal": {
                     "hora": "8:09",
                     "titulo": "● Canción 100",
@@ -211,6 +214,9 @@
                     "titulo": "8. Estudio bíblico de la congregación",
                     "duracion": "30 mins.",
                     "asignado": ["Conductor: Felipe Rojas", "Lector: Gabriel Soto"]
+                },
+                "palabrasConclusion": {
+                    "hora": "8:06",
                 },
                 "oracionFinal": {
                     "hora": "8:09",
@@ -358,7 +364,7 @@
             content += `
             <div class="programa-grid grid-vida-cristiana">
                 <div class="fila-programa">
-                    <span class="hora">8:06</span>
+                    <span class="hora">${data.palabrasConclusion.hora}</span>
                     <p class="descripcion">● Palabras de conclusión (3 min.)</p>
                     <div class="participantes-columna"></div>
                 </div>
