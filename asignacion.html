@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignación para la Reunión Vida y Ministerio Cristianos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #333;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 450px;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #000;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .form-group label {
+            flex: 0 0 130px; /* Ancho fijo para las etiquetas */
+            font-weight: bold;
+        }
+        .form-group input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            background-color: #eef3fa; /* Fondo azul claro */
+            border-radius: 4px;
+        }
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        fieldset legend {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+        }
+        .student-note {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #ddd;
+            font-size: 14px;
+        }
+        .student-note strong {
+            font-weight: bold;
+        }
+        .form-footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>ASIGNACIÓN PARA LA REUNIÓN VIDA Y MINISTERIO CRISTIANOS</h1>
+
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="ayudante">Ayudante:</label>
+                <input type="text" id="ayudante" name="ayudante">
+            </div>
+
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="text" id="fecha" name="fecha">
+            </div>
+
+            <div class="form-group">
+                <label for="intervencion">Intervención núm.:</label>
+                <input type="text" id="intervencion" name="intervencion">
+            </div>
+
+            <fieldset>
+                <legend>Se presentará en:</legend>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="sala_principal" name="sala" value="principal">
+                        <label for="sala_principal">Sala principal</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="sala_aux1" name="sala" value="aux1">
+                        <label for="sala_aux1">Sala auxiliar núm. 1</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="sala_aux2" name="sala" value="aux2">
+                        <label for="sala_aux2">Sala auxiliar núm. 2</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="student-note">
+                <p><strong>Nota al estudiante:</strong> En la <em>Guía de actividades</em> encontrará la información que necesita para su intervención. Repase también las indicaciones que se describen en las <em>Instrucciones para la reunión Vida y Ministerio Cristianos</em> (S-38).</p>
+            </div>
+
+            <div class="form-footer">
+                <p>S-89-S 11/23</p>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
+```

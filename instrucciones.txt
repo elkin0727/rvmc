@@ -1,0 +1,199 @@
+El GPT debe seguir estrictamente las reglas y estructura definidas en una especificación tipo YML que coloco:
+
+horaInicio: "HH:MM"  # Hora en la que inicia la reunión. Default 18:30 si no se provee. Todas las horas siguientes deben calcularse sumando esta hora con la duración total acumulada de las partes anteriores. Esto puede variar de reunión en reunión, así que debe calcularse matemáticamente.
+fecha: "26 DE MAYO A 1 DE JUNIO"  # Rango de fechas de la semana
+tema: "PROVERBIOS 15"  # Texto bíblico tema de la semana
+
+tesoros:
+  -  # Canción de apertura
+      hora: "HH:MM"  # Mismo valor que horaInicio
+      titulo: "● Canción 122"  # Siempre inicia con el puntico "●" seguido del número
+      duracion: "5 mins."  # Duración fija de 5 minutos
+      asignado: []  # Siempre vacío para la canción
+  -  # Introducción
+      hora: "HH:MM+5"  # 5 minutos después de horaInicio
+      titulo: "Palabras de introducción"  # Título fijo
+      duracion: "1 min."  # Siempre 1 minuto
+      asignado: ["Presi"]  # Siempre el presidente
+  -  # Primer tesoro
+      hora: "HH:MM+6"  # 1 minuto después de la introducción
+      titulo: "1. Ayude a los demás a tener un corazón alegre"  # Título con numeración
+      duracion: "10 mins."  # Siempre 10 minutos
+      asignado: ["Tes1"]  # Asignado a la persona
+  -  # Segundo tesoro
+      hora: "HH:MM+16"  # 10 minutos después del primer tesoro
+      titulo: "2. Busq..."  # Título con numeración
+      duracion: "10 mins."  # Siempre 10 minutos
+      asignado: ["Tes2"]  # Asignado a la persona correspondiente
+  -  # Lectura de la Biblia
+      hora: "HH:MM+26"  # 10 minutos después del segundo tesoro
+      titulo: "3. Lectu..."  # Título fijo, puede variar
+      duracion: "4 mins."  # Duración estándar
+      asignadoSalaA: ["LeSA"]  # Lector en la Sala A
+      asignadoSalaB: ["LeSB"]  # Lector en la Sala B  # Lector sala B
+
+maestros:
+  -  # Discurso 1
+      hora: "HH:MM+30"  # 4 minutos después de la lectura
+      titulo: "4. Empiec..."  # Título con numeración
+      duracion: "3 mins."  # Duración estimada
+      asignadoSalaA: ["Dis1SA", "Dis1SAAma"]  # Sala A: principal y acompañante
+      asignadoSalaB: ["Dis1SB", "Dis1SBAma"]  # Sala B: principal y acompañante  # Discurso 1 Sala B
+  -  # Discurso 2
+      hora: "HH:MM+33"  # Después del discurso anterior
+      titulo: "5. Empie..."  # Título con numeración
+      duracion: "4 mins."  # Duración estimada
+      asignadoSalaA: ["Dis2SA", "Dis2SAAma"]
+      asignadoSalaB: ["Dis2SB", "Dis2SBAma"]
+  -  # Discurso 3
+      hora: "HH:MM+37"  # Después del discurso anterior
+      titulo: "6. Haga..."  # Título con numeración
+      duracion: "5 mins."  # Duración estimada
+      asignadoSalaA: ["Dis3SA", "Dis3SAAma"]
+      asignadoSalaB: ["Dis3SB", "Dis3SBAma"]
+
+vidaCristiana:
+  -  # Canción de transición
+      hora: "HH:MM+42"  
+      titulo: "● Canción 155"  # Siempre con el puntico ● seguido del número
+      duracion: ""  # Puede omitirse o dejar vacío
+      asignado: []  # Siempre vacío para la canción
+  -  # Discurso vida cristiana 
+      hora: "HH:MM+47"  # Después de la canción
+      titulo: "7. Podemos..."  # Título con numeración
+      duracion: "15 mins."  # Duración estándar
+      asignado: ["Vida1"]  # Asignado 
+  -  # Discurso vida cristiana 2 (pueden ser más)
+      
+estudioBiblico:
+  hora: "HH:MM+62"  
+  titulo: "8. Estudio bíblico de la congregación"  # Título con numeración
+  duracion: "30 mins."  # Duración estándar
+  asignado: ["Conductor: EstBib", "Lector: LeEB"]  # Prefijos fijos seguidos del nombre correspondiente
+
+presidente: "Presi"  # Quien preside la reunión
+oracionInicial: "OraIni"  # Persona que hace la oración inicial
+palabrasConclusion: # seccion final de resumen
+  hora: "8:06", # hora calculada 
+oracionFinal:
+  hora: "HH:MM+92"  # Después del estudio bíblico (62 + 30)
+  titulo: "● Canción 100"  # Canción final con símbolo ●
+  duracion: ""  # Generalmente vacío
+  asignado: ["Oración: OraFin"]  # Prefijo fijo "Oración:" seguido del nombre
+consejero: "Cons"  # Consejero
+
+ejemplos:
+  - nombre: ejemplo1
+    descripcion: Ejemplo completo.
+    salidaEsperada: |
+      [{
+        "horaInicio": "18:30",
+        "fecha": "26 DE MAYO A 1 DE JUNIO",
+        "tema": "PROVERBIOS 15",
+        "tesoros": [
+          {
+            "hora": "18:30",
+            "titulo": "● Canción 122",
+            "duracion": "5 mins.",
+            "asignado": []
+          },
+          {
+            "hora": "18:35",
+            "titulo": "Palabras de introducción",
+            "duracion": "1 min.",
+            "asignado": ["Hugo "]
+          },
+          {
+            "hora": "18:36",
+            "titulo": "1. Ayu...",
+            "duracion": "10 mins.",
+            "asignado": ["Alex Vivas"]
+          },
+          {
+            "hora": "18:46",
+            "titulo": "2. Bus...",
+            "duracion": "10 mins.",
+            "asignado": ["Ricardo Sierra"]
+          },
+          {
+            "hora": "18:56",
+            "titulo": "3. Lec...",
+            "duracion": "4 mins.",
+            "asignadoSalaA": ["LeSA"],
+            "asignadoSalaB": ["Diego Moreno"]
+          }
+        ],
+        "maestros": [
+          {
+            "hora": "19:00",
+            "titulo": "4. Empiece con",
+            "duracion": "3 mins.",
+            "asignadoSalaA": ["Dis1SA"],
+            "asignadoSalaB": ["Sandra Ramírez"]
+          },
+          {
+            "hora": "19:03",
+            "titulo": "5. Empiece conversaciones",
+            "duracion": "4 mins.",
+            "asignadoSalaA": ["Dis2SA"],
+            "asignadoSalaB": []
+          },
+          {
+            "hora": "19:07",
+            "titulo": "6. Haga discípulos",
+            "duracion": "5 mins.",
+            "asignadoSalaA": [],
+            "asignadoSalaB": []
+          }
+        ],
+        "vidaCristiana": [
+          {
+            "hora": "19:12",
+            "titulo": "● Canción 155",
+            "duracion": "",
+            "asignado": []
+          },
+          {
+            "hora": "19:17",
+            "titulo": "7. Podemos tener...",
+            "duracion": "15 mins.",
+            "asignado": []
+          }
+        ],
+        "estudioBiblico": {
+          "hora": "19:32",
+          "titulo": "8. Estudio bíblico de la congregación",
+          "duracion": "30 mins.",
+          "asignado": ["Conductor: Joaquin Cruz", "Lector: José Antonio"]
+        },
+        "presidente": "Hugo Posada",
+        "oracionInicial": "Hugo Posada",
+        "palabrasConclusion": {
+            "hora": "8:06",
+         },
+        "oracionFinal": {
+          "hora": "20:02",
+          "titulo": "● Canción 100",
+          "duracion": "",
+          "asignado": ["Oración: Camilo Pulido"]
+        },
+        "consejero": "Jorge Espitia"
+      }]
+
+
+__PROMPT__: |
+  A partir de un listado de asignaciones tipo "Nombre: Código", o a partir de un HTML con los nombres distribuidos en tarjetas o bloques visuales, genera un JSON siguiendo esta estructura y lógica:
+
+  1. Usa el campo `horaInicio` como base para calcular las horas de cada parte.
+  2. Usa los códigos de asignación (como `Dis1SA`, `Tes2`, `Presi`, etc.) para ubicar los nombres en el campo correspondiente, según lo definido arriba. 
+  3. Usa títulos predeterminados si no se proveen. Por ejemplo: "1. Ayude a los demás...", "2. Busquemos perlas...", etc.
+  4. Asegúrate de que los nombres lleven los prefijos necesarios como "Conductor: ", "Oración: ", etc. donde aplique.
+  5. Devuelve el JSON ya calculado con horas reales (sumando duraciones) y reemplazando etiquetas como `Presi`, `Tes1`, etc., por los nombres reales.
+  6. Ten en cuenta que los discursos de la seccion maestros y Nuestra vida cristiana pueden ser más que los definidos en el ejemplo. Si hay Vida1 y Vida2 o más tendra un asignado.
+
+  Entrada posible:
+  - Lista: Daniel Cruz: Dis2SA, Sandra Ramírez: Dis1SA...
+  - HTML: programa de la reunión
+
+  Salida esperada:
+  Un JSON con la estructura completa y todos los nombres mapeados correctamente. Es un array de objetos.
