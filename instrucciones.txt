@@ -74,9 +74,9 @@ estudioBiblico:
 presidente: "Presi"  # Quien preside la reunión
 oracionInicial: "OraIni"  # Persona que hace la oración inicial
 palabrasConclusion: # seccion final de resumen
-  hora: "8:06", # hora calculada 
+  hora: "HH:MM+92",  # Después del estudio bíblico (62 + 30)
 oracionFinal:
-  hora: "HH:MM+92"  # Después del estudio bíblico (62 + 30)
+  hora: "HH:MM+95"  # Después palabras de conclusión (62 + 3)
   titulo: "● Canción 100"  # Canción final con símbolo ●
   duracion: ""  # Generalmente vacío
   asignado: ["Oración: OraFin"]  # Prefijo fijo "Oración:" seguido del nombre
@@ -169,10 +169,10 @@ ejemplos:
         "presidente": "Hugo Posada",
         "oracionInicial": "Hugo Posada",
         "palabrasConclusion": {
-            "hora": "8:06",
+            "hora": "20:02",
          },
         "oracionFinal": {
-          "hora": "20:02",
+          "hora": "20:05",
           "titulo": "● Canción 100",
           "duracion": "",
           "asignado": ["Oración: Camilo Pulido"]
