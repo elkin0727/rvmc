@@ -27,7 +27,7 @@ tesoros:
       asignado: ["Tes2"]  # Asignado a la persona correspondiente
   -  # Lectura de la Biblia
       hora: "HH:MM+26"  # 10 minutos después del segundo tesoro
-      titulo: "3. Lectu..."  # Título fijo, puede variar
+      titulo: "3. Lectura de la Biblia (4 mins)"  # Título fijo, minutos pueden variar
       duracion: "4 mins."  # Duración estándar
       asignadoSalaA: ["LeSA"]  # Lector en la Sala A
       asignadoSalaB: ["LeSB"]  # Lector en la Sala B  # Lector sala B

@@ -38,107 +38,109 @@
         }
 
         // Mock data ahora es un array de semanas
-        const mockData = [
-  {
-    "horaInicio": "18:30",
-    "fecha": "21-27 DE JULIO",
-    "tema": "PROVERBIOS 23",
-    "tesoros": [
-      {
-        "hora": "18:30",
-        "titulo": "● Canción 97",
-        "duracion": "5 mins.",
-        "asignado": []
-      },
-      {
-        "hora": "18:35",
-        "titulo": "Palabras de introducción",
-        "duracion": "1 min.",
-        "asignado": ["Sebastián García"]
-      },
-      {
-        "hora": "18:36",
-        "titulo": "1. Sabios consejos sobre las bebidas alcohólicas",
-        "duracion": "10 mins.",
-        "asignado": ["Wilson Manrique"]
-      },
-      {
-        "hora": "18:46",
-        "titulo": "2. Busquemos perlas escondidas",
-        "duracion": "10 mins.",
-        "asignado": ["Alex Vivas"]
-      },
-      {
-        "hora": "18:56",
-        "titulo": "3. Lectura de la Biblia",
-        "duracion": "4 mins.",
-        "asignadoSalaA": ["Felipe Espitia"],
-        "asignadoSalaB": ["Daniel Cruz"]
-      }
-    ],
-    "maestros": [
-      {
-        "hora": "19:00",
-        "titulo": "4. Empiece conversaciones",
-        "duracion": "2 mins.",
-        "asignadoSalaA": ["Claudia Moreno", "Nelcy de Sierra"],
-        "asignadoSalaB": ["Patricia Garcia", "Sandra Rodríguez"]
-      },
-      {
-        "hora": "19:02",
-        "titulo": "5. Haga revisitas",
-        "duracion": "5 mins.",
-        "asignadoSalaA": ["Luisa Fernanda García", "Karina Sánchez"],
-        "asignadoSalaB": ["Yolanda Reyes", "Liliana Vivas"]
-      },
-      {
-        "hora": "19:07",
-        "titulo": "6. Haga discípulos",
-        "duracion": "5 mins.",
-        "asignadoSalaA": ["Susan Byrne", "Herminia Lopez"],
-        "asignadoSalaB": ["Isabel Pulido", "Esperanza Virviescas"]
-      }
-    ],
-    "vidaCristiana": [
-      {
-        "hora": "19:12",
-        "titulo": "● Canción 35",
-        "duracion": "",
-        "asignado": []
-      },
-      {
-        "hora": "19:17",
-        "titulo": "7. ¿Estará bien que sirva alcohol?",
-        "duracion": "8 mins.",
-        "asignado": ["Pablo García", "Alvaro Vargas"]
-      },
-      {
-        "hora": "19:25",
-        "titulo": "8. Necesidades de la congregación",
-        "duracion": "7 mins.",
-        "asignado": []
-      }
-    ],
-    "estudioBiblico": {
-      "hora": "19:32",
-      "titulo": "9. Estudio bíblico de la congregación",
-      "duracion": "30 mins.",
-      "asignado": ["Conductor: Elkin Siabato", "Lector: Wilson Manrique"]
+        const mockData = [{
+  "horaInicio": "18:30",
+  "fecha": "21-27 DE JULIO",
+  "tema": "PROVERBIOS 23",
+  "tesoros": [
+    {
+      "hora": "18:30",
+      "titulo": "● Canción 97",
+      "duracion": "5 mins.",
+      "asignado": []
     },
-    "presidente": "Sebastián García",
-    "oracionInicial": "Carlos Meneses",
-    "palabrasConclusion": {
-      "hora": "20:05"
+    {
+      "hora": "18:35",
+      "titulo": "Palabras de introducción",
+      "duracion": "1 min.",
+      "asignado": ["Sebastián García"]
     },
-    "oracionFinal": {
-      "hora": "20:08",
-      "titulo": "● Canción 40",
+    {
+      "hora": "18:36",
+      "titulo": "1. Sabios consejos sobre las bebidas alcohólicas",
+      "duracion": "10 mins.",
+      "asignado": ["Wilson Manrique"]
+    },
+    {
+      "hora": "18:46",
+      "titulo": "2. Busquemos perlas escondidas",
+      "duracion": "10 mins.",
+      "asignado": ["Alex Vivas"]
+    },
+    {
+      "hora": "18:56",
+      "titulo": "3. Lectura de la Biblia (Pr 23:1-24)",
+      "duracion": "4 mins.",
+      "asignadoSalaA": ["Felipe Espitia"],
+      "asignadoSalaB": ["Daniel Cruz"]
+    }
+  ],
+  "maestros": [
+    {
+      "hora": "19:00",
+      "titulo": "4. Empiece conversaciones",
+      "duracion": "3 mins.",
+      "asignadoSalaA": ["Claudia Moreno", "Nelcy de Sierra"],
+      "asignadoSalaB": ["Patricia Garcia", "Sandra Rodríguez"]
+    },
+    {
+      "hora": "19:03",
+      "titulo": "5. Haga revisitas",
+      "duracion": "4 mins.",
+      "asignadoSalaA": ["Luisa Fernanda García", "Karina Sánchez"],
+      "asignadoSalaB": ["Yolanda Reyes", "Liliana Vivas"]
+    },
+    {
+      "hora": "19:07",
+      "titulo": "6. Haga discípulos",
+      "duracion": "5 mins.",
+      "asignadoSalaA": ["Susan Byrne", "Herminia Lopez"],
+      "asignadoSalaB": ["Isabel Pulido", "Esperanza Virviescas"]
+    }
+  ],
+  "vidaCristiana": [
+    {
+      "hora": "19:12",
+      "titulo": "● Canción 35",
       "duracion": "",
-      "asignado": ["Oración: David Ramírez"]
+      "asignado": []
     },
-    "consejero": "Leonardo Castillo"
-  }
-]
+    {
+      "hora": "19:17",
+      "titulo": "7. ¿Estará bien que sirva alcohol?",
+      "duracion": "8 mins.",
+      "asignado": ["Pablo García"]
+    },
+    {
+      "hora": "19:25",
+      "titulo": "8. Necesidades de la congregación",
+      "duracion": "7 mins.",
+      "asignado": ["Alvaro Vargas"]
+    }
+  ],
+  "estudioBiblico": {
+    "hora": "19:32",
+    "titulo": "9. Estudio bíblico de la congregación",
+    "duracion": "30 mins.",
+    "asignado": ["Conductor: Elkin Siabato", "Lector: Felipe Espitia"]
+  },
+  "presidente": "Sebastián García",
+  "oracionInicial": "Carlos Meneses",
+  "palabrasConclusion": {
+    "hora": "20:02"
+  },
+  "oracionFinal": {
+    "hora": "20:02",
+    "titulo": "● Canción 40",
+    "duracion": "",
+    "asignado": ["Oración: David Ramírez"]
+  },
+  "consejero": "Leonardo Castillo"
+}]
+
+
+
+
 
 
 
