@@ -1,0 +1,181 @@
+/* styles.css - Estilos para el generador de asignaciones */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+#formularios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.formulario {
+    flex: 0 0 auto;
+    margin-bottom: 10px;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 10px 30px 0px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 360px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-group label {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.form-group input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background-image: repeating-linear-gradient(to right, #000 0%, #000 50%, transparent 50%, transparent 100%);
+    background-size: 10px 1px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-color: transparent;
+    outline: none;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.form-group input[type="text"]:focus {
+    background-image: repeating-linear-gradient(to right, #4a90e2 0%, #4a90e2 50%, transparent 50%, transparent 100%);
+}
+
+.form-group.intervencion-group {
+    flex-wrap: nowrap;
+}
+
+.form-group.intervencion-group label {
+    flex: 0 0 130px;
+}
+
+.form-group.intervencion-group input[type="text"] {
+    width: calc(100% - 140px);
+    max-width: 100%;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 25px 0 10px 0;
+}
+
+fieldset legend {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.student-note {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.student-note strong {
+    font-weight: bold;
+}
+
+.form-footer {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fecha-impresion {
+    color: #aaa;
+    font-size: 8px;
+}
+
+.print-link-container {
+    text-align: center;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.print-link, .download-link {
+    color: #4a90e2;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.print-link:hover, .download-link:hover {
+    text-decoration: underline;
+}
+
+hr {
+    margin: 5px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.separator {
+    color: #ccc;
+}
+
+@media print {
+    .print-link-container {
+        display: none;
+    }
+    hr {
+        display: none;
+    }
+    .form-group input[type="text"] {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        border-bottom: 1px dashed #000 !important;
+        background-image: none !important;
+    }
+}
