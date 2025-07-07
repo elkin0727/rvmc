@@ -247,13 +247,13 @@
                         </div>
                     </div>
                 </div>
-                ${crearFilaDosSalas(lecturaBiblica.hora, lecturaBiblica.titulo, lecturaBiblica.duracion, lecturaBiblica.asignadoSalaA, lecturaBiblica.asignadoSalaB)}
+                ${crearFilaDosSalas(lecturaBiblica.hora, lecturaBiblica.titulo, lecturaBiblica.duracion, lecturaBiblica.asignadoSalaB, lecturaBiblica.asignadoSalaA)}
                 <div class="titulo-seccion seccion-maestros"><h2>SEAMOS MEJORES MAESTROS</h2></div>
             `;
 
             // Renderizar sección Maestros
             data.maestros.forEach(item => {
-                content += crearFilaDosSalas(item.hora, item.titulo, item.duracion, item.asignadoSalaA, item.asignadoSalaB);
+                content += crearFilaDosSalas(item.hora, item.titulo, item.duracion, item.asignadoSalaB, item.asignadoSalaA);
             });
             content += '</div>';
 
