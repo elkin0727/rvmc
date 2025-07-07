@@ -187,6 +187,7 @@ __PROMPT__: |
   1. Usa el campo `horaInicio` como base para calcular las horas de cada parte.
   2. Usa los códigos de asignación (como `Dis1SA`, `Tes2`, `Presi`, etc.) para ubicar los nombres en el campo correspondiente, según lo definido arriba. 
   3. Usa títulos predeterminados si no se proveen. Por ejemplo: "1. Ayude a los demás...", "2. Busquemos perlas...", etc.
+  3.1. Relacionado a los títulos de seamos mejores maestros, solo colocar los títulos con su numero correspondiente, sin los temas. Ejemplo: "4. Empiece conversaciones", "5. Haga revisitas", "6. Explique sus creencias", "6. Discurso".
   4. Asegúrate de que los nombres lleven los prefijos necesarios como "Conductor: ", "Oración: ", etc. donde aplique.
   5. Devuelve el JSON ya calculado con horas reales (sumando duraciones) y reemplazando etiquetas como `Presi`, `Tes1`, etc., por los nombres reales.
   6. Ten en cuenta que los discursos de la seccion maestros y Nuestra vida cristiana pueden ser más que los definidos en el ejemplo. Si hay Vida1 y Vida2 o más tendra un asignado.
