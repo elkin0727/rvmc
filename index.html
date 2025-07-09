@@ -16,7 +16,7 @@
         <!-- Los programas se generarán dinámicamente aquí -->
     </div>
     
-    <button onclick="generarYCopiarEnlace()" class="boton-enlace">...</button>
+    <button onclick="generarYCopiarEnlace()" class="boton-enlace" id="botonFechaEnlace">...</button>
 
     <script>
         // Función para generar y copiar el enlace
@@ -304,10 +304,22 @@
             container.innerHTML = semanas.map(semana => crearProgramaSemana(semana)).join('\n');
         }
 
+
+        function renderizarFechaHoy() {
+            const hoy = new Date();
+            const yyyy = hoy.getFullYear();
+            const mm = String(hoy.getMonth() + 1).padStart(2, '0');
+            const dd = String(hoy.getDate()).padStart(2, '0');
+            const fechaFormateada = `${yyyy}-${mm}-${dd}`;
+            document.getElementById('botonFechaEnlace').textContent = fechaFormateada;
+        }
+
         // Inicializar cuando el DOM esté listo
         document.addEventListener('DOMContentLoaded', () => {
             const datos = obtenerDatos();
             renderizarPrograma(datos);
+
+            renderizarFechaHoy();
         });
     </script>
 </body>
