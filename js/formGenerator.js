@@ -9,18 +9,18 @@ function generarFormularios(data) {
   // Generar formularios para lectura de la Biblia
   const lectura = semana.tesoros.find(t => t.titulo.includes("Lectura de la Biblia"));
   if (lectura) {
-    lectura.asignadoSalaA?.forEach(nombre => crearFormulario(nombre, "", "3", "Sala Auxiliar", fecha, contenedor));
-    lectura.asignadoSalaB?.forEach(nombre => crearFormulario(nombre, "", "3", "Sala Principal", fecha, contenedor));
+    lectura.asignadoSalaA?.forEach(nombre => crearFormulario(nombre, "", "3", "Sala Principal", fecha, contenedor));
+    lectura.asignadoSalaB?.forEach(nombre => crearFormulario(nombre, "", "3", "Sala Auxiliar", fecha, contenedor));
   }
 
   // Generar formularios para sección de maestros
   semana.maestros.forEach((item, index) => {
     const intervencion = (4 + index).toString();
     if (item.asignadoSalaA?.length) {
-      crearFormulario(item.asignadoSalaA[0], item.asignadoSalaA[1], intervencion, "Sala Auxiliar", fecha, contenedor);
+      crearFormulario(item.asignadoSalaA[0], item.asignadoSalaA[1], intervencion, "Sala Principal", fecha, contenedor);
     }
     if (item.asignadoSalaB?.length) {
-      crearFormulario(item.asignadoSalaB[0], item.asignadoSalaB[1], intervencion, "Sala Principal", fecha, contenedor);
+      crearFormulario(item.asignadoSalaB[0], item.asignadoSalaB[1], intervencion, "Sala Auxiliar", fecha, contenedor);
     }
   });
 }
